@@ -1,0 +1,15 @@
+<p>task-list works!</p>
+
+<div *ngFor="let item of tasksList">
+    <div [ngClass]="{'low':item.priority==PriorityValueStatic.Low,
+    'normal':item.priority==PriorityValueStatic.Normal,
+    'high':item.priority==PriorityValueStatic.High
+    }"
+     [ngStyle]="{'margin':'10px', 'font-size': '20px'}"
+
+     [important]="item.priority==PriorityValueStatic.High"          >
+        {{item | json}} <span  *ngIf="item.priority==PriorityValueStatic.Normal">completedf</span>
+    </div> 
+</div>
+
+

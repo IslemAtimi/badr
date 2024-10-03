@@ -1,0 +1,13 @@
+.low {
+    color: green;
+}
+.normal {
+    color: grey;
+}
+.high {
+    color: red;
+}
+
+.article{
+    text-decoration: underline;
+}

@@ -1,0 +1,15 @@
+<p>cp6 works!</p>
+<form [formGroup]="formulaire"  >
+    <label for="name">Name:</label>
+    <input id="name" formControlName="name" />
+    <p *ngIf="!formulaire.controls['name'].valid && formulaire.controls['name'].dirty">
+        Email is required
+      </p>
+    <input type="password" formControlName="pass">
+    <p *ngIf="!formulaire.controls['pass'].valid && formulaire.controls['pass'].dirty">
+        password is required
+      </p>
+
+
+    <button  (click)="onSubmit(formulaire)">Submit</button>
+  </form>
